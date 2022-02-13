@@ -1,12 +1,12 @@
 server:
-  port: 8081
+  port: 8080
 spring:
   application:
     name: fraud
   datasource:
-    username: amigoscode
-    password: password
-    url: jdbc:postgresql://localhost:5432/fraud
+    username: rjecbgkiqatnpq
+    password: fa61073afbd0d204791d1b8cb0cb199dc5fba986587afb84209f90a06bf14bbf
+    url: jdbc:postgresql://ec2-18-235-114-62.compute-1.amazonaws.com:5432/d75oh60khp86ie
   jpa:
     properties:
       hibernate:
@@ -15,10 +15,4 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-    fetch-registry: true
-    register-with-eureka: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
