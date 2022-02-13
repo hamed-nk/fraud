@@ -15,6 +15,7 @@ public class FraudService {
 
     @Transactional
     public Boolean isFraudulentCustomer(Long customerId) {
+        log.info(" fraud check request for customer {}", customerId);
         fraudRepository.save(
                 Fraud.builder()
                         .customerId(customerId)
